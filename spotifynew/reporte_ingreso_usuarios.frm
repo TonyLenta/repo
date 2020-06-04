@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `spotifynew`.`Cancion`.`Nombre_Cancion` AS `Nombre_Cancion`,`spotifynew`.`Disco`.`Nombre_Disco` AS `Nombre_Disco`,`spotifynew`.`Artistas`.`Nombre_Artista` AS `Nombre_Artista`,`spotifynew`.`Cancion`.`Numero_Visitas` AS `Numero_Visitas`,count(`spotifynew`.`Usuario`.`Nombre_Usuario`) AS `count(Usuario.Nombre_Usuario)` from `spotifynew`.`Cancion` join `spotifynew`.`Artistas` join `spotifynew`.`Usuario` join `spotifynew`.`Disco` group by `spotifynew`.`Cancion`.`Nombre_Cancion`
+md5=81185f08d3e2bfbc5f6ee485e677d878
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2020-06-04 05:08:32
+create-version=2
+source=SELECT Cancion.Nombre_Cancion, Disco.Nombre_Disco, Artistas.Nombre_Artista,  Cancion.Numero_Visitas, count(Usuario.Nombre_Usuario)\nFROM Cancion, Artistas, Usuario, Disco\ngroup by Cancion.Nombre_Cancion
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `spotifynew`.`Cancion`.`Nombre_Cancion` AS `Nombre_Cancion`,`spotifynew`.`Disco`.`Nombre_Disco` AS `Nombre_Disco`,`spotifynew`.`Artistas`.`Nombre_Artista` AS `Nombre_Artista`,`spotifynew`.`Cancion`.`Numero_Visitas` AS `Numero_Visitas`,count(`spotifynew`.`Usuario`.`Nombre_Usuario`) AS `count(Usuario.Nombre_Usuario)` from `spotifynew`.`Cancion` join `spotifynew`.`Artistas` join `spotifynew`.`Usuario` join `spotifynew`.`Disco` group by `spotifynew`.`Cancion`.`Nombre_Cancion`
+mariadb-version=100413
